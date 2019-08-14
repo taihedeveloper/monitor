@@ -1,0 +1,22 @@
+#对外接口
+api
+    --app
+    --conf
+#monitor监控
+scheduler
+
+    --common #公共方法
+    --conf   #配置目录
+    --docs   #文档，sql文件等
+    --lib    #类库
+    --libnet #网络类库
+    --logs   #日志
+    --ui     #业务逻辑
+        /alert.py
+        /common_util.py
+        /const.py
+        /http_availability.py
+        /webpage.py
+
+    start.py 开始脚本
+    

@@ -1,0 +1,39 @@
+@charset "utf-8";
+@downico: "/dist/Image/down_triangle.png";
+@upico: "/dist/Image/up_triangle.png";
+@searchico: "/dist/Image/search.png";
+
+@bgGray: #f9f9f9;
+@bgGray2: #f9f9f9;
+@headerH: 68px;
+@colorCcc: #ccc;
+@colorBbb: #bbb;
+@hoverColor: #4085f4;
+@aColor: #4085f4;
+
+.borderColor(@color:#ccc){
+    border: 1px solid @color
+}
+.fontSizes(@fontSize:14px){
+    font-size: @fontSize
+}
+/*倒三角形*/
+.triangleD (@w: 7px,@color: #333){
+    width: 0;
+    height: 0;
+    border-left: @w solid transparent;
+    border-right: @w solid transparent;
+    border-top: @w solid @color;
+    margin-right: 7px;
+    margin-top: 7px;
+}
+/*右三角*/
+.triangleR(@w: 7px,@color: #333) {
+    width: 0;
+    height: 0;
+    border-top: @w solid transparent;
+    border-bottom: @w solid transparent;
+    border-left: @w solid @color;
+    margin-right: 7px;
+    margin-top: 2px;
+}

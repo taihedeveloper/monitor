@@ -1,0 +1,28 @@
+#!/bin/bash
+supervice_home=/home/work/supervise
+
+start() {
+    kill -9 `ps -ef | grep -v grep | grep supervise | grep scheduler_start.py | awk '{print $2}'`
+    kill -9 `ps -ef | grep -v grep | grep scheduler_start.py | awk '{print $2}'`
+    mkdir -p $supervice_home/status/scheduler_cache
+    $supervice_home/bin/supervise  -p $supervice_home/status/scheduler_cache -f '/home/work/python/bin/python scheduler_start.py'
+}
+
+stop(){
+    kill -9 `ps -ef | grep -v grep | grep supervise | grep scheduler_start.py | awk '{print $2}'`
+    kill -9 `ps -ef | grep -v grep | grep scheduler_start.py | awk '{print $2}'`
+}
+
+case C"$1" in
+    Cstart)
+    start
+    echo "Done!"
+    ;;
+    Cstop)
+    stop
+    echo "Done!"
+    ;;
+    C*)
+    echo "Usage: $0 {start|stop}"
+    ;;
+esac

@@ -1,0 +1,102 @@
+@import "./mixin.less";
+
+.SideRight {
+    width: 100%;
+    min-height: 100px;
+    // padding-left: 200px;
+    overflow-y: auto;
+    // height: 400px;
+
+    .manage-main {
+        background: #fff;
+        border-left: 1px solid #ccc;
+        padding-bottom: 50px;
+    }
+}
+.topbox {
+    select {
+        &.manage-select {
+            width: 20%;
+            background-position: 95% center;
+        }
+        &.red-input {
+            border: 1px solid #f00;
+            color: #f00;
+            option {
+                color: #000 ;
+            }
+        }
+    }
+    input {
+        &.manage-input {
+            width: 20%;
+        }
+    }
+    .input-idbox {
+        input[type="number"] {
+            -moz-appearance:textfield;
+            &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+                -webkit-appearance: none !important;
+                margin: 0;
+            }
+        }
+    }
+
+    .box {
+        .subbox {
+            display: inline-block;
+            width: auto;
+            font-size:0;
+        }
+        button{
+            font-size: 13px;
+            display: inline-block;
+
+            margin-right: 10px;
+            padding: 0 20px;
+            &.blue-button{
+                boder: none;
+            }
+            &[disabled]{
+                
+            }
+        }
+    }
+}
+.manageTop {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background: @bgGray;
+    label {
+        font-size: 13px;
+    }
+    .nowrap {
+        label {
+            min-width: 68px;
+        }
+    }
+}
+.searchDetail {
+    padding: 5px 20px;
+    background: @bgGray;
+}
+.configList {
+    margin: 20px;
+
+    a {
+        color: @aColor;
+    }
+    
+    .button-area {
+        button {
+            margin-right: 10px;
+        }
+    }
+
+    table {
+        a {
+            margin: 0 2px;
+        }
+    }
+}
